@@ -1,0 +1,132 @@
+/*this is how to comment in css*/
+
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Notable');
+
+body {
+    background-color: #cae0fa;
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    color: #f57979;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: normal;
+    width: 70%;
+}
+
+nav {
+    font-family: 'Notable', sans-serif;
+    background-color: #90b8cc;
+    padding: 5px 0px 5px 15px;
+    letter-spacing: 3px;
+    /*width: 27em;*/
+}
+
+a {
+    color: #ffeaf9;
+    font-weight: bold;
+}
+
+a:visited {
+    color: #6471b9;
+}
+
+a:hover {
+    color: #6b93cf;
+}
+
+a.active {
+    color: #e0f2ff;
+    text-decoration: none; 
+}
+
+a:focus {
+    background-color: #a7e6ff;
+}
+
+main {
+    background: linear-gradient(#cae0fa, #90b8cc);
+    padding: 10px 30px 5px 30px;
+    /*width: 27em;*/
+}
+
+main p {
+    font-size: 14px;
+}
+
+main > p {
+    font-size: 14px;
+    color: #352836;
+}
+
+.box-shadow {
+    box-shadow: 0px 3px 10px 0px #414a69;
+}
+
+ul {
+    font-size: 12px;
+}
+
+footer p {
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    font-size: 0.8em;
+}
+
+footer {
+    background-color: #90b8cc;
+    padding: 5px 0px 5px 15px;
+    text-align: center;
+    /*width: 27em;*/
+}
+
+/*Here is some css for the test page*/
+body {
+    width: 70%;
+    min-width: 400px;
+}
+
+.bg {
+
+   
+    color: #FFF;
+    width: 27em;
+}
+
+.bg h1 {
+    color: #ffb1a7;
+}
+
+.test-nav {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #41695d;
+    padding: 5px 0px 5px 15px;
+}
+
+.test-nav a {
+    color: #d5fbdf;
+}
+
+.test-nav a:visited {
+    color: #6c9275;
+}
+
+.test-nav a:hover {
+    color: #4bff78;
+}
+
+.test-nav a.test-active {
+    color: #ddffe6;
+    text-decoration: none;
+}
+
+.test-footer {
+    background-color: #41695d;
+    padding: 5px 0px 5px 15px;
+}
+
+.test-footer p {
+    color: #ddffe6;
+    font-size: 12px;
+}

@@ -1,0 +1,160 @@
+<style>
+body {
+    background-color: #cbeeff;
+}
+
+.pupu {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f79ad0;
+    position: relative;
+    top: 100px;
+    margin: auto;
+}
+
+.korvav {
+    width: 50px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f79ad0;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    margin: auto;
+    animation-name: wave;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+}
+
+.sisakorvav {
+    width: 30px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f7d6e9;
+    position: absolute;
+    top: 25px;
+    left: 10px;
+}
+
+@keyframes wave {
+    0% {transform: rotate(0)}
+    50%{transform:rotate(-5deg)}
+    100%{transform:rotate(0deg)}
+
+}
+
+.korvao {
+    width: 50px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f79ad0;
+    position: absolute;
+    top: -100px;
+    right: 0;
+    margin: auto;
+    animation-name: wave2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+}
+
+.sisakorvao {
+    width: 30px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f7d6e9;
+    position: absolute;
+    top: 25px;
+    right: 10px;
+}
+
+@keyframes wave2 {
+    0% {transform: rotate(0)}
+    50%{transform:rotate(5deg)}
+    100%{transform:rotate(0deg)}
+}
+
+.silmav {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2b1b1b;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    margin: auto;
+    animation-name: blink-eye;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.silmao {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2b1b1b;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    margin: auto;
+    animation-name: blink-eye;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink-eye {
+    0% {border-radius: 50%}
+    50% {border-radius: 0;
+        height: 5px;
+        top: 70px;}
+    100% {border-radius: 50%}
+}
+
+#mouth {
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 45px;
+    top: 60px;
+    left: 62px;
+    color:#2b1b1b;
+}
+
+#mouth:after {
+    position: absolute;
+    content: "";
+    animation: mouth 5s linear infinite;
+}
+
+@keyframes mouth {
+    0% {content: "x";}
+    50% {content: "o";}
+    55% {content: "x";}
+    100% {content: "x";}
+}
+
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jänö</title>
+</head>
+<body>
+    <div class="pupu">
+        <div class="korvav">
+            <div class="sisakorvav"></div>
+        </div>
+        <div class="korvao">
+            <div class="sisakorvao"></div>
+        </div>
+        <div class="silmav"></div>
+        <div class="silmao"></div>
+        <h1><span id="mouth"></span></h1>
+    </div>
+</body>
+</html>

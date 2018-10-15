@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        a {
+            color: #000;
+            font-size: 40px;
+            transition-property: color;
+            transition-duration: 0.7s;
+            transition-timing-function: ease-in;
+            transition-delay: 0.3s;
+        }
+
+        a:hover {
+            color: #FFF;
+        }
+
+        .animate {
+            background-color: aquamarine;
+            width: 50px;
+            height: 50px;
+            animation-name: move;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.5s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(110px);
+            }
+        }
+
+       
+
+        #slider {
+            background: #000;
+            border: 5px solid #eaeaea;
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+            height: 320px;
+            width: 200px;
+            margin: 40px auto 0;
+            overflow: visible;
+            position: relative;
+        }
+
+        #mask {
+            overflow: hidden;
+            height: 320px;
+        }
+
+        #slider ul {
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        #slider li {
+            width: 200px;
+            height: 320px;
+            position: absolute;
+            top: -325px;
+            list-style: none;
+        }
+
+        #slider li.firstanimation {
+            animation: cycle 25s linear infinite;
+        }
+
+        #slider li.secondanimation {
+            animation: cycletwo 25s linear infinite;
+        }
+
+        #slider li.thirdanimation {
+            animation: cyclethree 25s linear infinite;
+        }
+
+        #slider li.fourthanimation {
+            animation: cyclefour 25s linear infinite;
+        }
+
+        #slider li.fifthanimation {
+            animation: cyclefive 25s linear infinite;
+        }
+
+        img {
+            height: 320px;
+        }
+
+        @keyframes cycle {
+            0% {top:0px;}
+            4% {top:0px;}
+            16% {top:0px; opacity: 1; z-index:0;}
+            20% {top: 325px; opacity: 0; z-index:0;}
+            21% {top: -325px; opacity: 0; z-index:-1;}
+            92% {top: -325px; opacity: 0; z-index:0;}
+            96% {top: -325px; opacity: 0;}
+            100% {top: 0px; opacity: 1;}
+        }
+
+        @keyframes cycletwo {
+            0% {top:-325px; opacity: 0;}
+            16% {top:-325px; opacity: 0;}
+            20% {top: 0px; opacity: 1;}
+            24% {top: 0px; opacity: 1;}
+            36% {top: 0px; opacity: 1; z-index:0;}
+            40% {top: 325px; opacity: 0; z-index:0;}
+            41% {top: -325px; opacity: 0; z-index:-1;}
+            100% {top: -325px; opacity: 0; z-index:-1;}
+        }
+
+        @keyframes cyclethree {
+            0% {top:-325px; opacity: 0;}
+            36% {top:-325px; opacity: 0;}
+            40% {top: 0px; opacity: 1;}
+            44% {top: 0px; opacity: 1;}
+            56% {top: 0px; opacity: 1;}
+            60% {top: 325px; opacity: 0; z-index:0;}
+            61% {top: -325px; opacity: 0; z-index:-1;}
+            100% {top: -325px; opacity: 0; z-index:-1;}
+        }
+
+        @keyframes cyclefour {
+            0% {top:-325px; opacity: 0;}
+            56% {top:-325px; opacity: 0;}
+            60% {top: 0px; opacity: 1;}
+            64% {top: 0px; opacity: 1;}
+            76% {top: 0px; opacity: 1; z-index:0;}
+            80% {top: 325px; opacity: 0; z-index:0;}
+            81% {top: -325px; opacity: 0; z-index:-1;}
+            100% {top: -325px; opacity: 0; z-index:-1;}
+        }
+
+        @keyframes cyclefive {
+            0% {top:-325px; opacity: 0;}
+            76% {top:-325px; opacity: 0;}
+            80% {top: 0px; opacity: 1;}
+            84% {top: 0px; opacity: 1;}
+            96% {top: 0px; opacity: 1; z-index:0;}
+            100% {top: 325px; opacity: 0; z-index:0;}
+        }
+
+        .progress-bar {
+            position: relative;
+            top:-5px;
+            width:680px;
+            height: 5px;
+            background: #FFF;
+            animation: fullexpand 25s ease-out infinite;
+        }
+
+        @keyframes fullexpand {
+            0%, 20%, 40%, 60%, 80%, 100% {width:0%; opacity: 0;}
+            4%, 24%, 44%, 64%, 84% {width:0%; opacity: 0.3;}
+            16%, 36%, 56%, 76%, 96% {width:100%; opacity: 0.7;}
+            17%, 37%, 57%, 77%, 97% {width:100%; opacity: 0.3;}
+            18%, 38%, 58%, 78%, 98% {width:100%; opacity: 0;}
+        }
+
+        #slider .tooltip {
+            background: rgba(0,0,0,0.7);
+            width: 200px;
+            height: 60px;
+            position: relative;
+            bottom: 75px;
+            left: -200px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #slider .tooltip h1 {
+            color: #FFF;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 60px;
+            padding: 0 0 0 10px;
+        }
+
+        #slider li#first:hover .tooltip,
+        #slider li#second:hover .tooltip,
+        #slider li#third:hover .tooltip,
+        #slider li#fourth:hover .tooltip,
+        #slider li#fifth:hover .tooltip {
+            left:0px;
+        }
+
+        #slider:hover li, 
+        #slider:hover .progress-bar {
+            animation-play-state: paused;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <a href="http://www.instagram.com/melmollie" >Instagram</a> 
+    <div class="animate"></div> -->
+
+    <div class="container">
+        <div id="content-slider">
+            <div id="slider"> <!-- Slider container -->
+                <div id="mask"> <!-- Mask -->
+
+                    <ul>
+                        <li id="first" class="firstanimation">
+                            <a href="#"><img src="../pictures/annie-spratt-66164-unsplash.jpg" alt="Annie Spratt"/></a>
+                            <div class="tooltip">
+                                <h1>Annie Spratt</h1>
+                            </div>
+                        </li>
+                        
+                        <li id="second" class="secondanimation">
+                            <a href="#"><img src="../pictures/simone-hutsch-782103-unsplash.jpg" alt="Simone Hutsch"/></a>
+                            <div class="tooltip">
+                                <h1>Simone Hutsch</h1>
+                            </div>
+                        </li>
+
+                        <li id="third" class="thirdanimation">
+                            <a href="#"><img src="../pictures/jason-wu-1080942-unsplash.jpg" alt="Jason Wu"/></a>
+                            <div class="tooltip">
+                                <h1>Jason Wu</h1>
+                            </div>
+                        </li>
+
+                        <li id="fourth" class="fourthanimation">
+                            <a href="#"><img src="../pictures/juskteez-vu-1041-unsplash.jpg" alt="Juskteez Vu"/></a>
+                            <div class="tooltip">
+                                <h1>Juskteez Vu</h1>
+                            </div>
+                        </li>
+
+                        <li id="fifth" class="fifthanimation">
+                            <a href="#"><img src="../pictures/samuel-ferrara-270946-unsplash.jpg" alt="Samuel Ferrara"/></a>
+                            <div class="tooltip">
+                                <h1>Samuel Ferrara</h1>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div> <!-- End mask -->
+
+                <div class="progress-bar"></div><!-- Progress bar -->
+            </div> <!-- End Slider Container -->
+        </div>
+    </div>
+</body>
+</html>

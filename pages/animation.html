@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.car {
+    width: 100px;
+    height: 200px;
+    background-color: #1a1212;
+    position: relative;
+    border-radius: 10px;
+    -webkit-animation-name: example; 
+    -webkit-animation-duration: 4s; 
+    animation-name: example;
+    animation-duration: 4s;
+    animation-timing-function: cubic-bezier(0.9, 0.3, 0.4, 1);
+    animation-iteration-count: infinite;
+}
+
+.window1 {
+    width: 80px;
+    height: 10px;
+    background-color: #85adf7;
+    float: left;
+    margin-top: 30px;
+    margin-left: 10px;
+    clear: both;
+}
+
+.window2 {
+    width: 80px;
+    height: 30px;
+    background-color: #85adf7;
+    float: left;
+    margin-top: 60px;
+    margin-left: 10px;
+    clear: both;
+}
+
+.light1 {
+    width: 15px;
+    height: 10px;
+    background-color: #ffef5f;
+    float: left;
+    margin-top: 55px;
+    margin-left: 10px;
+}
+
+.light2 {
+    width: 15px;
+    height: 10px;
+    background-color: #ffef5f;
+    float: left;
+    margin-top: 55px;
+    margin-left: 50px;
+}
+
+
+/* Standard syntax */
+@keyframes example {
+    0%   {top:0px;}
+    50% {top:500px;}
+    100% {top:0px;}
+}
+</style>
+</head>
+<body>
+
+
+<div class="car">
+    <div class="window1"></div>
+    <div class="window2"></div>
+    <div class="light1"></div>
+    <div class="light2"></div>
+</div>
+
+</body>
+</html>
